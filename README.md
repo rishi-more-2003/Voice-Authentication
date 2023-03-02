@@ -4,3 +4,5 @@
 * Trained two variants of the model:
   * 1.4M Parameters on 1,00,000 samples.
   * 3M Parameters on 10,000 samples.
+
+* Preprocessed the dataset 
