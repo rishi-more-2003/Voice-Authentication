@@ -15,7 +15,7 @@ class L1Dist(Layer):
     def call(self, input_embedding, validation_embedding):
         return tf.math.abs(input_embedding - validation_embedding)
 
-model_path = "VBA/10K_sample_siam_model.h5"
+model_path = "Rishi/100K_sample_siam_model_2M.h5"
 model = keras.models.load_model(model_path,custom_objects={'L1Dist': L1Dist})
 
 def predict(mel1, mel2):

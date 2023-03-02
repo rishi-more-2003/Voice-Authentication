@@ -11,7 +11,7 @@ params = {"N_FFT": 1024,
         "Mel_F_Min": 0,
         "Mel_F_Max": 8000,}
 
-path = 'VBA\HelloHello5.wav'
+path = 'Rishi\HelloHello5.wav'
 audio, mel = pattern_generate(path, params['N_FFT'], params['Mel_Dim'], params['Sample_Rate'], params['Frame_Shift'],
                                   params['Frame_Length'], params['Mel_F_Min'], params['Mel_F_Max'])
 mel = pad_crop(mel, mode = 'mean')
