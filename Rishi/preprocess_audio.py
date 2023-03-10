@@ -131,12 +131,21 @@ def pad_crop(spec,mode):
         return pad_spec(spec, desired_shape = (80,450), mode = mode)
     elif y >= 450:
         return spec[:,:450]
-            
-if "__main__" == __name__:
-    path = 'Rishi\HelloHello5.wav'
+    
+def get_mel(path):
     audio, mel = pattern_generate(path, params['N_FFT'], params['Mel_Dim'], params['Sample_Rate'], params['Frame_Shift'],
                                   params['Frame_Length'], params['Mel_F_Min'], params['Mel_F_Max'])
-    mel = pad_crop(mel, mode = 'mean')
+    
+    mel = pad_crop(mel, mode='mean')
+    return mel
+    
+            
+if "__main__" == __name__:
+    path = 'Rishi/audio_samples/HelloHello5.wav'
+    # audio, mel = pattern_generate(path, params['N_FFT'], params['Mel_Dim'], params['Sample_Rate'], params['Frame_Shift'],
+    #                               params['Frame_Length'], params['Mel_F_Min'], params['Mel_F_Max'])
+    # mel = pad_crop(mel, mode = 'mean')
+    mel = get_mel(path)
     print(mel.shape)
     plt.matshow(mel)
     plt.show()
