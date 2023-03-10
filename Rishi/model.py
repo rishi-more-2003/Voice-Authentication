@@ -1,8 +1,7 @@
 import tensorflow as tf
 from tensorflow import keras
-from keras import layers
 from keras.models import Model
-from keras.layers import Layer, Conv2D, Dense, MaxPooling2D, Input, Flatten, Conv1D, MaxPooling1D, Concatenate, BatchNormalization, Dropout
+from keras.layers import Layer
 
 # Siamese L1 Distance class
 class L1Dist(Layer):
