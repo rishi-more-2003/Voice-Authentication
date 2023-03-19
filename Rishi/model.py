@@ -5,16 +5,13 @@ from keras.layers import Layer
 
 # Siamese L1 Distance class
 class L1Dist(Layer):
-    
-    # Init method - inheritance
     def __init__(self, **kwargs):
         super().__init__()
-       
-    # Magic happens here - similarity calculation
+
     def call(self, input_embedding, validation_embedding):
         return tf.math.abs(input_embedding - validation_embedding)
 
-model_path = "Rishi/100K_sample_siam_model_2M.h5"
+model_path = "Rishi/100K_sample_siam_model_900K.h5"
 model = keras.models.load_model(model_path,custom_objects={'L1Dist': L1Dist})
 
 def predict(mel1, mel2):
