@@ -138,6 +138,11 @@ def get_mel(path):
     
     mel = pad_crop(mel, mode='mean')
     return mel
+
+def get_embeddings(path):
+    'This method gets embeddings of an audio sample in .wav format'
+    
+    
     
             
 if "__main__" == __name__:
