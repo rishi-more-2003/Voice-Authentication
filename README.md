@@ -6,7 +6,7 @@
   * 3M Parameters on 10K samples.
   * 900K Parameters on 1M samples
 
-* Preprocessed the audio dataset using Librosa with Fast Fourier Transform to extract vocla features.
+* Preprocessed the audio dataset using Librosa with Fast Fourier Transform to extract vocal features.
 * Further used torch modules to preprocess audio in real time.
 * Improved the model accuracy to about 90%.
-* Created a novel Siamese architecture for extracting of audio features to identify speaker and verify speaker while keeping low overhead and computational delay.
+* Created a novel siamese model architecture for extraction of audio features to identify speaker and verify speaker while keeping low overhead and computational delay.
