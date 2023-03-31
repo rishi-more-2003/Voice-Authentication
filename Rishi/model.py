@@ -16,13 +16,24 @@ model = keras.models.load_model(model_path,custom_objects={'L1Dist': L1Dist})
 embedder = keras.models.load_model('Rishi/embedder_head_1M.h5')
 tail = keras.models.load_model('Rishi/tail_1M.h5')
 
-def get_embeddings(mel):
+def generate_embedding(mel):
     return embedder.predict(mel.reshape(-1,80,450))
 
 def calc_dist(input_embedding,validation_embedding):
-    
+    '''
+    This method calculates the L1 distance between two embeddings
+    '''
     dist = tf.math.abs(input_embedding - validation_embedding)
     return tail.predict(dist)
+
+def get_prediction(mel_1,mel_2):
+    '''
+    This method returns the prediction of the model
+    '''
+    
+    embed_1 = generate_embedding(mel_1)
+    embed_2 = generate_embedding(mel_2)
+    return calc_dist(embed_1,embed_2)
     
 
 def predict(mel1, mel2):
