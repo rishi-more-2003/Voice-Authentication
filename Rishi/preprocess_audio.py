@@ -15,7 +15,7 @@ from scipy.io.wavfile import read
 
 import matplotlib.pyplot as plt
 
-from model import generate_embeddings
+from model import generate_embedding
 
 
 mel_basis = {}
@@ -145,12 +145,12 @@ def get_embeddings(path):
     'This method gets embeddings of an audio sample in .wav format'
     
     mel = get_mel(path)
-    embedding = generate_embeddings(mel)
+    embedding = generate_embedding(mel)
     return embedding
     
             
 if "__main__" == __name__:
-    path = 'Rishi/audio_samples/HelloHello5.wav'
+    path = 'audio_samples/HelloHello5.wav'
     embeddings = get_embeddings(path)
     mel = get_mel(path)
     print(embeddings.shape)
