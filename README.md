@@ -10,3 +10,5 @@
 * Further used torch modules to preprocess audio in real time.
 * Improved the model accuracy to about 90%.
 * Created a novel siamese model architecture for extraction of audio features to identify speaker and verify speaker while keeping low overhead and computational delay.
+
+# Currently working on detailing the architectural optimizations achieved by globally caching hann windows and embedding the mel spectrograms into 450*80 matrices through a research paper. 
