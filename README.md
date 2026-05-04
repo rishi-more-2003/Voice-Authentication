@@ -264,17 +264,13 @@ voice-authentication/
 ├── notebooks/                   # Exploratory work
 │   └── Wav_to_Spectograms.ipynb #   Original development notebook
 │
-├── figures/                     # Architecture & spectrogram figures
-│   ├── architecture.png
-│   ├── mel_spectrogram.png
-│   ├── mel_spectrogram_raw.png
-│   ├── mel_spectrogram_padded.png
-│   ├── mel_spectrogram_voxceleb.png
-│   └── mel_spectrogram_speaker2.png
-│
-├── Krish/                       # Frontend — static HTML/CSS/JS (Bootstrap)
-├── Sahil/                       # Frontend — React application
-└── Rishi/                       # Original Python ML scripts & notebook
+└── figures/                     # Architecture & spectrogram figures
+    ├── architecture.png
+    ├── mel_spectrogram.png
+    ├── mel_spectrogram_raw.png
+    ├── mel_spectrogram_padded.png
+    ├── mel_spectrogram_voxceleb.png
+    └── mel_spectrogram_speaker2.png
 ```
 
 ---
